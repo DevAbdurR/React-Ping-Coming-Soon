@@ -1,14 +1,17 @@
 import React from "react";
-import { ReactComponent as Facebook } from "../assets/icons/facebook.svg";
-import { ReactComponent as Twitter } from "../assets/icons/twitter.svg";
-import { ReactComponent as Instagram } from "../assets/icons/instagram.svg";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div>
-      <Facebook />
-      <Twitter />
-      <Instagram />
+    <div className="footer">
+      <div className="icons-container">
+        <FaFacebook color="hsl(223, 87%, 63%)" size={30} />
+        <FaTwitter color="hsl(223, 87%, 63%)" size={30} />
+        <FaInstagram color="hsl(223, 87%, 63%)" size={30} />
+      </div>
+      <div className="copyright-text">
+        <p>&copy; Copyright Ping. All rights reserved.</p>
+      </div>
     </div>
   );
 }

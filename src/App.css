@@ -34,6 +34,10 @@ body {
   font-weight: 700;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* Header Component Styling */
 
 .header {
@@ -86,4 +90,55 @@ body {
 
 .img-container img {
   width: 100%;
+}
+
+/* Footer Component Styling */
+
+.footer {
+  text-align: center;
+  margin-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-container {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.copyright-text {
+  margin-top: 30px;
+  color: hsl(0, 0%, 59%);
+  font-size: 14px;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 1024px) {
+  .app {
+    max-width: 600px;
+    padding: 0;
+  }
+
+  .heading {
+    font-size: 2.4rem;
+  }
+
+  .form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-field {
+    flex-basis: 68%;
+  }
+
+  .submit-btn {
+    margin: 0;
+    flex-basis: 30%;
+  }
 }

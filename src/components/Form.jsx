@@ -1,39 +1,32 @@
 import React from "react";
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 function Form() {
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState(null);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  function isValidEmail(email) {
-    return /\S+@\S+\.\S+/.test(email);
-  }
-
-  const handleChange = (event) => {
-    if (!isValidEmail(event.target.value)) {
-      setError("Email is invalid");
-    } else {
-      setError(null);
-    }
-
-    setEmail(event.target.value);
-  };
+  const onSubmit = (values) => alert("Success");
 
   return (
-    <div className="form-container">
-      <div>
+    <div>
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-field"
+          type="text"
           placeholder="Your Email Address..."
-          type="email"
-          name="email"
-          id="email"
-          value={email}
-          onChange={handleChange}
+          {...register("email", {
+            required: true,
+            pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+          })}
         />
-        {error && <h5 className="error">{error}</h5>}
-      </div>
-      <button className="submit-btn">Notify Me</button>
+        <button type="submit" className="submit-btn cursor-pointer">
+          Notify Me
+        </button>
+      </form>
+      {errors.email && <span className="error">Invalid email</span>}
     </div>
   );
 }
