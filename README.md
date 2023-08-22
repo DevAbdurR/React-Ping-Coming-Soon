@@ -2,7 +2,8 @@
 
 This project presents a Coming Soon Page with Email Validation. It's designed to capture user interest for an upcoming event or product launch by allowing users to submit their email addresses for updates.
 
-![Project Preview](screenshot.png)
+![image](https://github.com/DevAbdurR/React-Ping-Coming-Soon/assets/112758727/5b21674e-e758-48aa-ab14-00691f00fa3a)
+
 
 ## Features
 
@@ -12,7 +13,7 @@ This project presents a Coming Soon Page with Email Validation. It's designed to
 
 ## Demo
 
-See the live project in action: [Coming Soon Page Demo](https://your-live-demo-link.com)
+See the live project in action: https://react-ping-coming-soon.netlify.app/
 
 ## Technologies Used
 
