@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
+  font-family: "Manrope", sans-serif;
+  font-family: "Overpass", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+  height: 100vh;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.app {
+  min-width: 275px;
+  max-width: 425px;
+  padding: 20px;
+}
+
+/* Universal Classes */
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* Header Component Styling */
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.heading {
+  margin: 20px 0;
+  color: hsl(0, 0%, 59%);
+}
+
+.heading span {
+  color: black;
+}
+
+/* Form Component Styling */
+
+.input-field,
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  outline: none;
+}
+
+.input-field {
+  border: 1px solid hsl(223, 100%, 88%);
+  padding-left: 20px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  border: none;
+  background-color: hsl(223, 87%, 63%);
   color: white;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.error {
+  margin-left: 20px;
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Illustration Component Styling */
+
+.img-container {
+  margin-top: 50px;
+}
+
+.img-container img {
+  width: 100%;
 }
